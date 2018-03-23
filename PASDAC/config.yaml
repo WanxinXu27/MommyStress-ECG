@@ -1,0 +1,36 @@
+PATH_DATA: data50hz  # folder containing original data
+PATH_OUTPUT: Output         # folder containing generated data
+
+SAVING_DATA: CSV            # or PICKLE
+
+SMOOTHING_TECHNIQUE:
+  method: gaussian # or method: gaussian, winsize:30, sigma:0.1
+  winsize: 10
+  sigma: 0.5
+
+
+SEGMENTATION_TECHNIQUE:
+  method: slidingWindow
+  winSizeSecond: 10
+  stepSizeSecond: 1
+
+FEATURE_TYPE: ecgFeatures
+
+CLASSIFIER: SVM # knnVoting or RandomForests or SVM or AdaBoost or NaiveBayes or NeuralNetwork or LogisticRegression or LinearSVM
+
+DATASET: ecg
+
+SUBJECT_LIST:
+- 1
+
+
+
+PARTITION:
+  SUBJECT_DEPENDENCY: "personalized"   # personalized or generalized
+
+SENSORS_AVAILABLE:
+- Sample (V)
+CLASS_LABELS:
+- 0
+- 1
+

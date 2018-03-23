@@ -1,0 +1,36 @@
+PATH_DATA: Data           # folder containing original data
+PATH_OUTPUT: Output         # folder containing generated data
+
+SAVING_DATA: CSV            # or PICKLE
+
+SMOOTHING_TECHNIQUE:
+  method: boxcar    # or method: gaussian, winsize:30, sigma:0.1
+  winsize: 30
+
+SEGMENTATION_TECHNIQUE:
+  method: slidingWindow
+  winSizeSecond: 1
+  stepSizeSecond: 0.5
+
+FEATURE_TYPE: VerySimple
+
+CLASSIFIER: knnVoting
+
+DATASET: activity
+
+SUBJECT_LIST:
+- 1
+
+PARTITION:
+  SUBJECT_DEPENDENCY: "personalized"   # personalized or generalized
+
+SENSORS_AVAILABLE:
+- AccelX
+- AccelY
+- AccelZ
+
+CLASS_LABELS:
+- Rest
+- Run
+- Walk
+- Jump
